@@ -1,0 +1,18 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* COLOR PALETTE */
+
+:root {
+    --white: #ECE7EE;
+    --black: #030b38;
+    --green: #27a361; 
+    --red: #a01031;
+    --blue: #006fca;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+}
+
