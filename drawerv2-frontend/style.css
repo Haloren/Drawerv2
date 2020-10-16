@@ -18,6 +18,40 @@
 body {
     width: 50%;
     height: 50%;
+    background-color: var(--blue);
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.copyright {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: var(--white);
+    text-shadow:1px 1px 10px var(--black);
+  }
