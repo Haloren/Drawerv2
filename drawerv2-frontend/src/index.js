@@ -143,7 +143,7 @@ const showWords  = () => {
 
 //RULES
 const showRules = () => {
-    console.log("Show Rules")
+    // console.log("Show Rules")
     let hide = document.getElementById("showRules");
     if (hide.style.display === "none") {
         hide.style.display = "";

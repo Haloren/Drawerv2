@@ -16,7 +16,9 @@
 }
 
 body {
-    columns: 2;
+    column-count: 2;
+    column-width: 200vw 200vw;
+    column-gap: normal;
     width: 50%;
     height: 50%;
     background-color: var(--blue);
