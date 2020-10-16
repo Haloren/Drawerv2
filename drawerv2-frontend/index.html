@@ -14,10 +14,6 @@
 
         <script src="/drawerv2-frontend/src/timer.js"></script>
         <div class="counter"></div>
-
-        <canvas id="canvas">
-            <script src="/drawerv2-frontend/src/canvas.js"></script>
-        </canvas>
         
         <form id="new-player">
             <input type="text" name="name" placeholder="Player Name">
@@ -37,12 +33,22 @@
             <input type="text" name="name" placeholder="Add Word">
             <input type="submit" id="add-word" class="add-word" value="Add Word">
         </form>
+
     </main>
+
+    <canvas id="canvas">
+        <script src="/drawerv2-frontend/src/canvas.js"></script>
+    </canvas>
+
+    <button class="rulesbtn" onclick="showRules()">Rules/Help</button>
+    <article id="showRules" style="display: none" class="rules">
+        <p> Some Rules and Stuff </p>
+    </article>
+
 </body>
 <footer>
-    <script src="/drawerv2-frontend/src/rules.js"></script>
-    <button>Rules</button>
 
     <div class="copyright"><small> &copy;2020 Drawer! </small></div>
+
 </footer>
 </html>

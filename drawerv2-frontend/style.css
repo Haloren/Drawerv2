@@ -16,9 +16,14 @@
 }
 
 body {
+    columns: 2;
     width: 50%;
     height: 50%;
     background-color: var(--blue);
+}
+
+canvas {
+    border: 10px solid var(--white);
 }
 
 .cards-container {
