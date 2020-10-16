@@ -98,12 +98,20 @@ let renderCards = (cardList) => {
     div.innerHTML = cardList[Math.floor(Math.random() * cardList.length)].content 
     div2.innerHTML = cardList[Math.floor(Math.random() * cardList.length)].content
 
-    document.getElementById("new-words").addEventListener('submit', addWord)
+    document.getElementById("new-word").addEventListener('submit', addWord)
     
     cardsContainer.appendChild(div)
     cardsContainer.appendChild(div2)
 }
 
-const addWord = () => {
-    
+const addWord = (e) => {
+    e.preventDefault()
+    const configObj = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept':'application/json'
+        },
+
+    }
 }
