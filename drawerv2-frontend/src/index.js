@@ -29,6 +29,7 @@ const renderPlayer = (playerList) => {
     input.innerHTML = "0"
 
     button.setAttribute("class", "delete-player")
+    button.setAttribute("data-player-id", player.id)
     button.innerHTML = "☠️"
 
     input.setAttribute("class", "points")
@@ -43,10 +44,34 @@ const renderPlayer = (playerList) => {
     p.appendChild(input)
 }
 
-const createPlayer = () => {
-
+const createPlayer = (e) => {
+    e.preventDefault()
+    const configObj = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept':'application/json'
+        },
+        body: JSON.stringify({name: e.target.name.value})
+    }
+    fetch(PLAYERS_URL, configObj)
+    .then(resp = resp.json())
+    .then(json =>
+          json.message ? alert(json.message) : renderPlayer(json)
+    )
 }
 
-const deletePlayer = () => {
-
+const deletePlayer = (e) => {
+    e.preventDefault()
+    const configObj = {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept':'application/json'
+        }
+    }
+    fetch(`${PLAYERS_URL}/${e.target.dataset.playerId}`, configObj)
+        e.target.parentElement.remove()
 }
+
+//GAME CARDS (cards-container)

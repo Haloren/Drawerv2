@@ -11,24 +11,28 @@
 <header></header>
 <body>
     <main>
+        
         <script src="/drawerv2-frontend/src/timer.js"></script>
-        <div class="counter">
-
-        </div>
+        <div class="counter"></div>
 
         <canvas id="canvas">
             <script src="/drawerv2-frontend/src/canvas.js"></script>
         </canvas>
         
         <form id="new-player">
-
+            <input type="text" name="name" placeholder="Player Name">
+            <input type="submit" id="add-player" class="add-player" value="Add Player">
         </form>
 
         <div id="scoreboard">
             <h1> Scoreboard </h1>
         </div>
 
+        <div id="cards-container" class="cards-container">
+            <div id="cards-grid" class="cards-grid"></div>
+        </div>
         <button id="new-words"> Get New Words </button>
+
     </main>
 </body>
 <footer>
