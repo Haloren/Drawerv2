@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drawer!</title>
+    <title>Drawer! v2</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script defer src="/drawer-frontend/src/index.js" charset="utf-8"></script>
-    <script src="/drawer-frontend/src/canvas.js"></script>
+    <script defer src="/drawerv2-frontend/src/index.js" charset="utf-8"></script>    
 </head>
+
 <header>
-    
+    <script src="/drawerv2-frontend/src/rules.js"></script>
+    <button class="rules-btn">Rules</button>
+    <article id="hideRules" style="display: none" class="rules">
+        <p> insert rules.js here</p>
+    </article>
+
+    <script src="/drawerv2-frontend/src/timer.js"></script>
+    <h1>Time Left: <span id="time-left">60</span></h1>
+        <button id="start-btn">Start</button>
 </header>
 <body>
     <main>
+        <canvas id="canvas">
+            <script src="/drawerv2-frontend/src/canvas.js"></script>
+        </canvas>
+        
+
 
     </main>
 </body>
