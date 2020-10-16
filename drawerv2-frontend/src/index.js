@@ -120,3 +120,15 @@ const addWord = (e) => {
         json.message ? alert(json.message) : renderCards(json)    
     )
 }
+
+//GET NEW WORDS (re-run loadCards)
+const newWords = document.getElementById("new-words")
+
+newWords.addEventListener('click', function(){
+    // console.log("new-words")
+    document.getElementById("game-card1").replaceWith()
+    document.getElementById("game-card2").replaceWith()
+    loadCards()
+})
+
+//HIDE AND SHOW GAME CARDS
