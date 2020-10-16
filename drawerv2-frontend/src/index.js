@@ -112,6 +112,11 @@ const addWord = (e) => {
             'Content-Type': 'application/json',
             'Accept':'application/json'
         },
-
+        body: JSON.stringify({content: e.target.name.value})
     }
+    fetch(CARDS_URL, configObj)
+    .then(resp = resp.json())
+    .then(json =>
+        json.message ? alert(json.message) : renderCards(json)    
+    )
 }
