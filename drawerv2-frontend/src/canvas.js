@@ -6,5 +6,4 @@ window.addEventListener('load', () => {
     canvas.width = window.innerWidth/2;
 
 
-
 })

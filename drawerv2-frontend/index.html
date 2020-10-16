@@ -8,19 +8,14 @@
     <script defer src="/drawerv2-frontend/src/index.js" charset="utf-8"></script>    
 </head>
 
-<header>
-    <script src="/drawerv2-frontend/src/rules.js"></script>
-    <button class="rules-btn">Rules</button>
-    <article id="hideRules" style="display: none" class="rules">
-        <p> insert rules.js here</p>
-    </article>
-
-    <script src="/drawerv2-frontend/src/timer.js"></script>
-    <h1>Time Left: <span id="time-left">60</span></h1>
-        <button id="start-btn">Start</button>
-</header>
+<header></header>
 <body>
     <main>
+        <script src="/drawerv2-frontend/src/timer.js"></script>
+        <div class="counter">
+                
+        </div>
+
         <canvas id="canvas">
             <script src="/drawerv2-frontend/src/canvas.js"></script>
         </canvas>
@@ -30,6 +25,10 @@
     </main>
 </body>
 <footer>
+    <script src="/drawerv2-frontend/src/rules.js"></script>
+    <button class="rules-btn">Rules</button>
+    <article id="hideRules" style="display: none" class="rules"></article>
+
     <div class="copyright"><small> &copy;2020 Drawer! </small></div>
 </footer>
 </html>
