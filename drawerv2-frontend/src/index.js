@@ -18,7 +18,35 @@ const loadPlayers = () => {
         json.forEach(player => renderPlayer(player))
     })
 }
+//PLAYERS ON SCOREBOARD: NAME / DELETE(BUTTON) / POINTS(INPUT) 
+const renderPlayer = (playerList) => {
+    const p = document.createElement("p")
+    const input = document.createElement("input")
+    const button = document.createElement("button")
 
-const renderPlayer = () => {
-    
+    p.setAttribute("class", "player")
+    p.innerHTML = playerList.name
+    input.innerHTML = "0"
+
+    button.setAttribute("class", "delete-player")
+    button.innerHTML = "☠️"
+
+    input.setAttribute("class", "points")
+    input.setAttribute("type", "number")
+    input.setAttribute("value", "0")
+
+    document.getElementById("new-player").addEventListener('submit', createPlayer)
+    button.addEventListener('click', deletePlayer)
+
+    player.appendChild(p)
+    p.appendChild(button)
+    p.appendChild(input)
+}
+
+const createPlayer = () => {
+
+}
+
+const deletePlayer = () => {
+
 }
