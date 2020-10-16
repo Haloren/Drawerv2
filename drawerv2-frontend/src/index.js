@@ -132,3 +132,11 @@ newWords.addEventListener('click', function(){
 })
 
 //HIDE AND SHOW GAME CARDS
+const showWords  = () => {
+    let hide = document.getElementById("cards-grid");
+    if(hide.style.display === "none") {
+        hide.style.display = "";
+    } else {
+        hide.style.display = "none"
+    }
+}

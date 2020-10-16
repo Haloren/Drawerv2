@@ -21,7 +21,13 @@ body {
     background-color: var(--blue);
 }
 
-
+.cards-container {
+    height: 100px;
+    width: 200px;
+    border: 2px solid;
+    padding: 0 10px;
+    margin: auto;
+}
 
 
 
