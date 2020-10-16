@@ -5,3 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Game.delete_all
+Game.create
+
+Player.delete_all
+Player.create(name: "Zero Cool", game_id: Game.first.id)
+Player.create(name: "Cereal", game_id: Game.first.id)
+Player.create(name: "Crash Override", game_id: Game.first.id)
+Player.create(name: "Acid Burn", game_id: Game.first.id)
+
+Card.delete_all
+words = [
+    'Hot Dog',
+    'Scream',
+    'Crane',
+    'Drop',
+    'Hackers',
+    'Blade',
+    'Phantom',
+    'Garbage'
+
+]
+words.each do |word|
+    Card.create(content: word, game_id: Game.first.id)
+end
