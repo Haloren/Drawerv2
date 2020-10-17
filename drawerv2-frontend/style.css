@@ -4,6 +4,7 @@
 /* COLOR PALETTE */
 :root {
     --white: #ECE7EE;
+    --silver: #C0C0C0;
     --black: #030b38;
     --green: #27a361; 
     --red: #a01031;
@@ -15,18 +16,26 @@
     font-family: 'Permanent Marker', cursive;
 }
 
-body {
-    column-count: 2;
-    column-width: 200vw 200vw;
-    column-gap: normal;
-    width: 50%;
-    height: 50%;
-    background-color: var(--blue);
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { 
+    opacity: 1;
 }
 
-canvas {
-    border: 10px solid var(--white);
+body {
+    background-color: var(--blue);
 }
+    .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: auto;
+    }
+    .row::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
 
 .cards-container {
     height: 100px;
@@ -36,31 +45,52 @@ canvas {
     margin: auto;
 }
 
+/* CANVAS */
+canvas {
+    background-color: var(--white);
+    border: 10px solid var(--silver);
+    box-shadow: 0px 0px 10px var(--black);
+}
+    .canvas-controls {
+        color: var(--white);
+        margin: 10px;
+    }
+    #clear-canvas {
+        border-radius: 5px;
+    }
+    #color {
+        border-radius: 5px;
+    }
+    #weight {
+        text-align: center;
+        opacity: 1;
+        border-radius: 5px;
+    }
 
+/* RULES AND HELP */
+.rulesbtn {
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 5px;
+}
+    .rulesbtn:hover {
+        background-color: var(--white);
+        color: var(--blue);
+    }
+.rules {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--blue);
+    background-color: var(--white);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* COPYRIGHT */
 .copyright {
     position: fixed;
     bottom: 10px;
