@@ -20,22 +20,25 @@
         <script src="/drawerv2-frontend/src/timer.js"></script>
         <div class="counter"></div>
         
+        <div class="timer"></div>
+
         <form id="new-player">
-            <input type="text" name="name" placeholder="Player Name">
+            <input type="text" name="name" class="new-player" placeholder="Player Name">
             <input type="submit" id="add-player" class="add-player" value="Add Player">
         </form>
 
-        <div id="scoreboard">
+        <div id="scoreboard" class="scoreboard">
             <h1> Scoreboard </h1>
         </div>
 
         <div id="cards-container" class="cards-container" onclick="showWords()">
+            <small> Click to Turn Over </small>
             <div id="cards-grid" class="cards-grid"></div>
         </div>
         <button id="new-words"> Get New Words </button>
 
         <form id="new-word" class="new-word">
-            <input type="text" name="name" placeholder="Add Word">
+            <input type="text" name="name" class="new-word" placeholder="Add Word">
             <input type="submit" id="add-word" class="add-word" value="Add Word">
         </form>
     </main>

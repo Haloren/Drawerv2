@@ -135,7 +135,7 @@ newWords.addEventListener('click', function(){
 const showWords  = () => {
     let hide = document.getElementById("cards-grid");
     if(hide.style.display === "none") {
-        hide.style.display = "flex";
+        hide.style.display = "";
     } else {
         hide.style.display = "none"
     }
