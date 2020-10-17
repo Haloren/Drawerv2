@@ -19,8 +19,6 @@
     <main class="column">
         <script src="/drawerv2-frontend/src/timer.js"></script>
         <div class="counter"></div>
-        
-        <div class="timer"></div>
 
         <form id="new-player">
             <input type="text" name="name" class="new-player" placeholder="Player Name">
@@ -31,11 +29,14 @@
             <h1> Scoreboard </h1>
         </div>
 
+        <div class="timer"></div>
+
         <div id="cards-container" class="cards-container" onclick="showWords()">
-            <small> Click to Turn Over </small>
+            <h2> Game Cards </h2>
             <div id="cards-grid" class="cards-grid"></div>
+            <small> Click to Turn Over </small>
         </div>
-        <button id="new-words"> Get New Words </button>
+        <button id="new-words" class="new-words"> Get New Words </button>
 
         <form id="new-word" class="new-word">
             <input type="text" name="name" class="new-word" placeholder="Add Word">
