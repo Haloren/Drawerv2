@@ -8,8 +8,14 @@
     <script defer src="/drawerv2-frontend/src/index.js" charset="utf-8"></script>    
 </head>
 
-<header></header>
+<header>
+    <button class="rulesbtn" onclick="showRules()">Rules</button>
+    <article id="showRules" style="display: none" class="rules">
+        <p> Some Rules and Stuff </p>
+    </article>
+</header>
 <body class="row">
+    <br>
     <main class="column">
         <script src="/drawerv2-frontend/src/timer.js"></script>
         <div class="counter"></div>
@@ -42,20 +48,14 @@
             <label> Color: </label>
             <input type="color" id="color">
 
-            <label> Pen Tip: </label>
-            <input type="number" id="weight" min="2" max="5" value="3">
+            <label> Line Width: </label>
+            <input type="number" id="pen-tip" min="2" max="5" value="3">
         </div>
         <canvas id="canvas"></canvas>
     </div>
 
 </body>
 <footer>
-    <button class="rulesbtn" onclick="showRules()">Rules</button>
-    <article id="showRules" style="display: none" class="rules">
-        <p> Some Rules and Stuff </p>
-    </article>
-
     <div class="copyright"><small> &copy;2020 Drawer! </small></div>
-
 </footer>
 </html>

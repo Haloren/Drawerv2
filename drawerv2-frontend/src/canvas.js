@@ -2,6 +2,10 @@ window.addEventListener('load', () => {
     const canvas = document.querySelector("canvas");
     const context = canvas.getContext("2d");
 
+    // const penColor = document.getElementById('color').value
+    // const penWidth = document.getElementById('pen-tip').value
+
+
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
 
@@ -17,8 +21,8 @@ window.addEventListener('load', () => {
     }
     function draw(e){
         if(!drawing) return;
-        context.lineWidth = 5; // THIS CHANGES THE LINE THICKNESS
-        context.strokeStyle = "blue"; // THIS CHANGES THE LINE COLOR
+        context.lineWidth = "5"; // THIS CHANGES THE LINE THICKNESS penWidth
+        context.strokeStyle = "#000000"; // THIS CHANGES THE LINE COLOR penColor
         context.lineCap = "round";
         // console.log(e)
         context.lineTo(e.clientX, e.clientY);
