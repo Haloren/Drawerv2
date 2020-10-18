@@ -10,20 +10,34 @@ const showRules = () => {
 }
 
 //Timer
-const startBtn = document.getElementById("start-btn");
-const resetBtn = document.getElementById("reset-btn");
+document.addEventListener('DOMContentLoaded', () => {
+    const timeLeftDisplay = document.getElementById("seconds");
+    const startBtn = document.getElementById("start-btn");
+    const resetBtn = document.getElementById("reset-btn");
+    timeLeft = document.getElementById("seconds").value
 
-document.addEventListener('click', () => startTimer())
-// document.addEventListener('click', () => resetTimer())
+    function countDown(){
+        setInterval(function(){
+            if(timeLeft <= 0) {
+                clearInterval(timeLeft == 0)
+                //Do something here to highlight times up
+            }
+            timeLeftDisplay.innerHTML = formatTime(timeLeft);
+            timeLeft--
+        }, 1000);
+    }
 
-const startTimer = () => {
+    function formatTime(time) {
+        return time < 10 ? `0${time}` : time; 
+    }
 
-}
+    function resetTime(){
+        timeLeft = 60
+    }
 
-const resetTimer = () => {
-
-}
-
+    startBtn.addEventListener('click', countDown);
+    resetBtn.addEventListener('click', resetTime);
+})
 
 //Main
 const BASE_URL = "http://localhost:3000"

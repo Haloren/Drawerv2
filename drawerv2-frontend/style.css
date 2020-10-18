@@ -79,15 +79,15 @@ canvas {
     .time {
         text-align: center;
         font-size: 2.5rem;
-        color: var(--silver);
+        color: var(--black);
     }
     #start-btn {
         margin: .5rem .2rem;
-        width: 45%;
-        float: left;
         color: var(--green);
         border-color: var(--green);
         border-radius: 5px;
+        width: 45%;
+        float: left;
     }
         #start-btn:hover {
             color: var(--white);
@@ -140,11 +140,11 @@ canvas {
         color: var(--blue);
         display: grid;
         grid-template-columns: 50% 20% 20%;
-        padding: .2rem
+        padding: .2rem;
         /* grid-row-start / grid-column-start / grid-row-end / grid-column-end */
     }
     .player {
-        grid-area 1/1/3;
+        grid-area: 1/1/3;
         font-size: 1.5rem;
         margin: 0;
         border-bottom: var(--silver);
@@ -254,7 +254,9 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 10px;
     color: var(--blue);
     background-color: var(--white);
-    border-radius: 5px;
+    border: 10px solid var(--silver);
+    border-style: groove;
+    box-shadow: 0 0 20px 2px var(--black);
 }
     .rules h1,h4 {
         text-align: center;
