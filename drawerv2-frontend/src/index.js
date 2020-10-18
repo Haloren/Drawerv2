@@ -1,3 +1,14 @@
+//RULES
+const showRules = () => {
+    // console.log("Show Rules")
+    let hide = document.getElementById("showRules");
+    if (hide.style.display === "none") {
+        hide.style.display = "";
+    } else {
+        hide.style.display = "none"
+    }
+}
+
 const BASE_URL = "http://localhost:3000"
 const PLAYERS_URL = `${BASE_URL}/players`
 const CARDS_URL = `${BASE_URL}/cards`
@@ -135,17 +146,6 @@ newWords.addEventListener('click', function(){
 const showWords  = () => {
     let hide = document.getElementById("cards-grid");
     if(hide.style.display === "none") {
-        hide.style.display = "";
-    } else {
-        hide.style.display = "none"
-    }
-}
-
-//RULES
-const showRules = () => {
-    // console.log("Show Rules")
-    let hide = document.getElementById("showRules");
-    if (hide.style.display === "none") {
         hide.style.display = "";
     } else {
         hide.style.display = "none"
