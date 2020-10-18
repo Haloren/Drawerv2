@@ -61,6 +61,47 @@ canvas {
         border-radius: 5px;
         cursor: pointer;
     }
+    
+/* TIMER */
+.timer {
+    height: 105px;
+    border: 5px solid var(--silver);
+    border-style: groove;
+    margin-top: .5rem;
+    margin-left: 3rem;
+    background-color: var(--white);
+}
+    .time {
+        text-align: center;
+        font-size: 2.5rem;
+        color: var(--silver);
+    }
+    .start-btn {
+        margin: .5rem .2rem;
+        width: 45%;
+        float: left;
+        color: var(--green);
+        border-color: var(--green);
+        border-radius: 5px;
+    }
+        .start-btn:hover {
+            color: var(--white);
+            background-color: var(--green);
+            cursor: pointer;
+        }
+    .reset-btn {
+        margin: .5rem .2rem;
+        width: 45%;
+        float: right;
+        color: var(--red);
+        border-color: var(--red);
+        border-radius: 5px;
+    }
+        .reset-btn:hover {
+            color: var(--white);
+            background-color: var(--red);
+            cursor: pointer;
+        }
 
 /* INPUT NEW PLAYER AND NEW WORD */
 .new-player, .new-word {
@@ -128,11 +169,6 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button { 
     opacity: 1;
     cursor: pointer;
-}
-
-/* TIMER */
-.timer {
-
 }
 
 /* GAME CARDS */

@@ -12,8 +12,12 @@
 <body class="row">
     <br>
     <main class="menu">
-        <script src="/drawerv2-frontend/src/timer.js"></script>
-        <div class="counter"></div>
+        <div class="timer">
+            <script src="/drawerv2-frontend/src/timer.js"></script>
+            <div class="time">00 : 00</div>
+            <button class="start-btn" onclick="startTimer()">Start</button>
+            <button class="reset-btn" onclick="resetTimer()">Reset</button>
+        </div>
 
         <form id="new-player">
             <input type="text" name="name" class="new-player" placeholder="Player Name">
@@ -23,8 +27,6 @@
         <div id="scoreboard" class="scoreboard">
             <h1> Scoreboard </h1>
         </div>
-
-        <div class="timer"></div>
 
         <div id="cards-container" class="cards-container" onclick="showWords()">
             <h2> Game Cards </h2>
