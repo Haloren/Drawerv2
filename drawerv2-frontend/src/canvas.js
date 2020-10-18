@@ -25,7 +25,10 @@ window.addEventListener('load', () => {
         context.strokeStyle = "#000000"; // THIS CHANGES THE LINE COLOR penColor
         context.lineCap = "round";
         // console.log(e)
-        context.lineTo(e.clientX, e.clientY);
+        context.lineTo(e.clientX, e.clientY); //X 518, Y 343
+        // context.lineTo(e.screenX, e.screenY); //X 519, Y 455
+        // context.lineTo(e.x, e.y); //X 514, Y 251
+
         context.stroke();        
     }
 

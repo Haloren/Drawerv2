@@ -39,6 +39,9 @@ canvas {
     width: 95%;
     height: 800px;
 }
+    canvas:hover {
+        cursor: grab;
+    }
     .canvas-controls {
         color: var(--white);
         margin: 5px 5%;
