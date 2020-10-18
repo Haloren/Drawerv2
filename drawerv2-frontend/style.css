@@ -81,7 +81,7 @@ canvas {
         font-size: 2.5rem;
         color: var(--black);
     }
-    #start-btn {
+    #toggle {
         margin: .5rem .2rem;
         color: var(--green);
         border-color: var(--green);
@@ -89,12 +89,12 @@ canvas {
         width: 45%;
         float: left;
     }
-        #start-btn:hover {
+        #toggle:hover {
             color: var(--white);
             background-color: var(--green);
             cursor: pointer;
         }
-    #reset-btn {
+    #reset {
         margin: .5rem .2rem;
         width: 45%;
         float: right;
@@ -102,7 +102,7 @@ canvas {
         border-color: var(--red);
         border-radius: 5px;
     }
-        #reset-btn:hover {
+        #reset:hover {
             color: var(--white);
             background-color: var(--red);
             cursor: pointer;
