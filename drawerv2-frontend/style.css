@@ -15,29 +15,18 @@
     box-sizing: border-box;
     font-family: 'Permanent Marker', cursive;
 }
+    .menu {
+        width: 35%;
+        float: left;
+    }
+    .canvas {
+        width: 65%;
+        float: left;
+    }
 
 body {
     background-color: var(--blue);
-}
-    .column {
-        float: left;
-        width: 50%;
-        padding: 10px;
-        height: auto;
-    }
-    .row::after{
-        content: "";
-        display: table;
-        clear: both;
-    }
-
-
-.cards-container {
-    height: 100px;
-    width: 200px;
-    border: 2px solid;
-    padding: 0 10px;
-    margin: auto;
+    z-index: 0;
 }
 
 /* CANVAS */
@@ -46,21 +35,27 @@ canvas {
     border: 15px solid var(--silver);
     border-style: groove;
     box-shadow: 0px 0px 10px var(--black);
+    margin: 0 5%;
+    width: 95%;
+    height: 800px;
 }
     .canvas-controls {
         color: var(--white);
-        margin: 10px;
+        margin: 5px 5%;
     }
     #clear-canvas {
         border-radius: 5px;
+        cursor: pointer;
     }
     #color {
         border-radius: 5px;
+        cursor: pointer;
     }
     #weight {
         text-align: center;
         opacity: 1;
         border-radius: 5px;
+        cursor: pointer;
     }
 
 /* RULES AND HELP */
@@ -86,24 +81,21 @@ canvas {
     background-color: var(--white);
 }
 
-/* NEW PLAYER, NEW WORD, GET NEW WORDS */
+/* INPUT NEW PLAYER AND NEW WORD */
 .new-player, .new-word {
     font-size: 1.5rem;
     margin: 1rem 0;
 }
-.add-player, .add-word {
+.add-player, .add-word{
     margin: 5px;
     font-size: 1.5rem;
+    border-radius: 5px;
 }
     .add-player:hover, .add-word:hover {
         cursor: pointer;
         background-color: var(--black);
         color: var(--white);
     }
-.new-words {
-    position: relative;
-    font-size: 1.5rem;
-}
 
 /* SCOREBOARD */
 .scoreboard {
@@ -112,6 +104,7 @@ canvas {
     border-style: groove;
     box-shadow: 0px 0px 10px var(--black);
     text-align: center;
+    margin-left: 2rem;
 }
     .scoreboard h1 {
         margin: 0;
@@ -163,8 +156,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* GAME CARDS */
 .cards-container {
-    height: 230px;
-    width: 400px;
+    height: 250px;
+    width: 100%;
     padding: 0 30px;
     margin: 1rem;
     background-color: var(--white);
@@ -175,10 +168,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
     .cards-container:hover {
         background-color: var(--black);
-        color: var(--blue);
+        color: var(--white);
         cursor: pointer;
     }
     .cards-container h2 {
+        margin: 0;
+        padding: 0;
+    }
+    .cards-container h4 {
+        font-size: .75rem;
+        color: var(--blue);
         margin: 0;
         padding: 0;
     }
@@ -191,13 +190,24 @@ input[type=number]::-webkit-outer-spin-button {
     border: 2px solid var(--silver);
     border-style: groove;
     box-shadow: 0 0 10px 1px;
+    font-size: 1.5rem;
+}
+
+/* GET NEW WORDS */
+.new-words {
+    width: 75%;
+    margin: 0 6rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 0 2rem;
+    box-shadow: 0px 0px 10px var(--white);
 }
 
 /* COPYRIGHT */
 .copyright {
     position: fixed;
     bottom: 10px;
-    left: 10px;
+    right: 10px;
     color: var(--white);
     text-shadow:1px 1px 10px var(--black);
   }

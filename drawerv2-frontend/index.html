@@ -16,7 +16,7 @@
 </header>
 <body class="row">
     <br>
-    <main class="column">
+    <main class="menu">
         <script src="/drawerv2-frontend/src/timer.js"></script>
         <div class="counter"></div>
 
@@ -33,9 +33,10 @@
 
         <div id="cards-container" class="cards-container" onclick="showWords()">
             <h2> Game Cards </h2>
+            <h4> Click to Turn Over </h4>
             <div id="cards-grid" class="cards-grid"></div>
-            <small> Click to Turn Over </small>
         </div>
+
         <button id="new-words" class="new-words"> Get New Words </button>
 
         <form id="new-word" class="new-word">
@@ -44,20 +45,20 @@
         </form>
     </main>
 
-    <div class="column">
+    <div class="canvas">
         <script src="/drawerv2-frontend/src/canvas.js"></script>
         <div class="canvas-controls">
             <button id="clear-canvas">Erase Canvas</button>
 
-            <label> Color: </label>
+            <!-- <label> Color: </label>
             <input type="color" id="color">
 
             <label> Line Width: </label>
-            <input type="number" id="pen-tip" min="2" max="5" value="3">
+            <input type="number" id="pen-tip" min="2" max="5" value="3"> -->
         </div>
         <canvas id="canvas"></canvas>
     </div>
-
+    
 </body>
 <footer>
     <div class="copyright"><small> &copy;2020 Drawer! </small></div>
