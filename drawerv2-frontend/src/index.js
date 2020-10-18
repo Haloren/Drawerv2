@@ -24,11 +24,6 @@ const resetTimer = () => {
 
 }
 
-// Alert Box force stops people from being able to draw after time limit
-// const alertTimer = () => {
-//     alert('Times Up!')
-// }
-
 
 //Main
 const BASE_URL = "http://localhost:3000"
