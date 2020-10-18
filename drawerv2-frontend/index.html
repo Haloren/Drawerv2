@@ -12,11 +12,13 @@
 <body class="row">
     <br>
     <main class="menu">
-        <div class="timer">
-            <script src="/drawerv2-frontend/src/timer.js"></script>
-            <div class="time">00 : 00</div>
-            <button class="start-btn" onclick="startTimer()">Start</button>
-            <button class="reset-btn" onclick="resetTimer()">Reset</button>
+        <div id="timer" class="timer">
+        <script src="/drawerv2-frontend/src/timer.js"></script>
+            <div class="time">
+                <span id="minutes"></span> : <span id="seconds"></span>
+            </div>
+            <button id="start-btn" onclick="setTimeout(alertTimer, 3000)">Start</button>
+            <button id="reset-btn">Reset</button>
         </div>
 
         <form id="new-player">
@@ -60,7 +62,6 @@
 <footer>
     <button class="rulesbtn" onclick="showRules()">Rules</button>
     <article id="showRules" style="display: none" class="rules">
-        <script src="/drawerv2-frontend/src/rules.js"></script>
     <h1> Add a Player </h1>
     <ol>
         <li> Enter a Name into the "Player Name" box</li>

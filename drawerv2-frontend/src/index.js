@@ -10,8 +10,27 @@ const showRules = () => {
 }
 
 //Timer
+const startBtn = document.getElementById("start-btn");
+const resetBtn = document.getElementById("reset-btn");
+
+document.addEventListener('click', () => startTimer())
+// document.addEventListener('click', () => resetTimer())
+
+const startTimer = () => {
+
+}
+
+const resetTimer = () => {
+
+}
+
+// Alert Box force stops people from being able to draw after time limit
+// const alertTimer = () => {
+//     alert('Times Up!')
+// }
 
 
+//Main
 const BASE_URL = "http://localhost:3000"
 const PLAYERS_URL = `${BASE_URL}/players`
 const CARDS_URL = `${BASE_URL}/cards`
