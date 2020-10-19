@@ -13,10 +13,10 @@
     <br>
     <main class="menu">
         <div id="timer" class="timer">
-        <script src="/drawerv2-frontend/src/timer.js"></script>
-            <div class="time"> 01 : 30 </div>
+            <div class="time" id="time"> 00 : 00 </div>
             <button id="toggle">Start</button>
             <button id="reset">Reset</button>
+        <script src="/drawerv2-frontend/src/timer.js"></script>
         </div>
 
         <form id="new-player">
@@ -43,7 +43,6 @@
     </main>
 
     <div class="canvas">
-        <script src="/drawerv2-frontend/src/canvas.js"></script>
         <div class="canvas-controls">
             <button id="clear-canvas">Erase Canvas</button>
 
@@ -54,6 +53,7 @@
             <input type="number" id="pen-tip" min="2" max="5" value="3"> -->
         </div>
         <canvas id="canvas"></canvas>
+    <script src="/drawerv2-frontend/src/canvas.js"></script>
     </div>
     
 </body>

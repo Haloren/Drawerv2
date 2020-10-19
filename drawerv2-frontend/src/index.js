@@ -151,3 +151,26 @@ const showRules = () => {
         hide.style.display = "none"
     }
 }
+
+//TIMER
+const time = document.getElementById('time');
+const toggle = document.getElementById('toggle');
+const reset = document.getElementById('reset');
+
+const timer = new Countdown(time);
+
+toggle.addEventListener('click', function() {
+    if (timer.timeRunning) {
+        timer.stop();
+        
+        console.log('stop')
+    } else {
+        timer.start();
+        console.log('start')
+    }
+});
+
+reset.addEventListener('click', function() {
+    timer.reset();
+    console.log('reset')
+})
