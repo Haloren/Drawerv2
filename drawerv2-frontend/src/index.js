@@ -163,9 +163,12 @@ toggle.addEventListener('click', function() {
     if (timer.timeRunning) {
         timer.stop();
         
+        toggle.textContent = 'Start'
         console.log('stop')
     } else {
         timer.start();
+
+        toggle.textContent = 'Stop'
         console.log('start')
     }
 });

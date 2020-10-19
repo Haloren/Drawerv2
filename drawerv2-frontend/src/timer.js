@@ -4,7 +4,9 @@ function Countdown(element) {
     let offset; //using Date() and this will calc time past
 
     function update() { 
-        time += timePast();
+        if (this.timeRunning){
+            time += timePast();
+        }
         let displayTime = formatTime(time);
         
         element.textContent = displayTime
@@ -39,7 +41,7 @@ function Countdown(element) {
 
     this.start = function() {
         if (!this.timeRunning) {
-            interval = setInterval(update, 100);
+            interval = setInterval((update.bind(this)), 100); // window.setInterval so we have to bind .this to update
             offset = Date.now();
             this.timeRunning = true;
         }
@@ -54,7 +56,8 @@ function Countdown(element) {
     };
 
     this.reset = function() {
-        time = 0
+        time = 0;
+        update();
     };
 }
 

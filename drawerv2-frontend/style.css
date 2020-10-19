@@ -6,7 +6,6 @@
     --white: #ECE7EE;
     --silver: #C0C0C0;
     --black: #030b38;
-    --green: #27a361; 
     --red: #a01031;
     --blue: #006fca;
 }
@@ -83,15 +82,15 @@ canvas {
     }
     #toggle {
         margin: .5rem .2rem;
-        color: var(--green);
-        border-color: var(--green);
+        color: var(--blue);
+        border-color: var(--blue);
         border-radius: 5px;
         width: 45%;
         float: left;
     }
         #toggle:hover {
             color: var(--white);
-            background-color: var(--green);
+            background-color: var(--blue);
             cursor: pointer;
         }
     #reset {
