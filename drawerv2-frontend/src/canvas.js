@@ -6,8 +6,8 @@ window.addEventListener('load', () => {
     // const penWidth = document.getElementById('pen-tip').value
 
 
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;//400; //this is 800px
+    canvas.width = window.innerWidth;//400;
 
     let drawing = false;
 
@@ -25,9 +25,10 @@ window.addEventListener('load', () => {
         context.strokeStyle = "#000000"; // THIS CHANGES THE LINE COLOR penColor
         context.lineCap = "round";
         // console.log(e)
-        context.lineTo(e.clientX, e.clientY); //X 518, Y 343
-        // context.lineTo(e.screenX, e.screenY); //X 519, Y 455
-        // context.lineTo(e.x, e.y); //X 514, Y 251
+        console.log(e.clientX, e.clientY);
+        context.lineTo(e.clientX, e.clientY); //X 830, Y 90
+        // context.lineTo(e.screenX, e.screenY); 
+        // context.lineTo(e.x, e.y);
 
         context.stroke();        
     }
