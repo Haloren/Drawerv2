@@ -24,11 +24,12 @@ window.addEventListener('load', () => {
         context.lineWidth = "5"; // THIS CHANGES THE LINE THICKNESS penWidth
         context.strokeStyle = "#000000"; // THIS CHANGES THE LINE COLOR penColor
         context.lineCap = "round";
+        
         // console.log(e)
-        console.log(e.clientX, e.clientY);
-        context.lineTo(e.clientX, e.clientY); //X 830, Y 90
-        // context.lineTo(e.screenX, e.screenY); 
-        // context.lineTo(e.x, e.y);
+        console.log(e.offsetX, e.offsetY);
+        context.lineTo(e.offsetX, e.offsetY); //X 11, Y 12 
+        // console.log(e.clientX, e.clientY);
+        // context.lineTo(e.clientX, e.clientY); //X 830, Y 90
 
         context.stroke();        
     }
