@@ -1,9 +1,13 @@
-#Drawer v2
+# DRAWER v2
+Demo link coming soon.
 
-#Getting Started
+Exploration goals for this project:
+- Build a Rails API
+- Build a Single Page Application (SPA) that uses the data from the rails API
+- Build a SPA with Javascript  
+- Work with grids and columns in CSS
 
-
-
+# RULES
 ## Add a Player
 1.  Enter a Name into the "Player Name" box
 2.  Name must be 1-20 characters long
@@ -33,3 +37,12 @@
 ## Add a Word
 1.  Words can be 1-21 characters long
 2.  Duplicate words will not be saved
+
+# Contributors Guide
+Bug reports and pull requests are welcome on GitHub. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+# License
+Copyright 2020 (Kyle R. McKenna)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
