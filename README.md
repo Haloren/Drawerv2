@@ -1,5 +1,5 @@
 # DRAWER v2
-YouTube Video Demo: https://www.youtube.com/watch?v=XPEXFG_qAw8&feature=youtu.be
+YouTube Video Demo: https://youtu.be/XPEXFG_qAw8
 
 Exploration goals for this project:
 - Build a Rails API

@@ -14,6 +14,7 @@ class PlayersController < ApplicationController
         # byebug
         player = game.players.new(player_params)
         if player.save
+            # byebug
              render json: player
         else
              render json: {message: player.errors.full_messages.to_sentence}

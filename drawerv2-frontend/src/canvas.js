@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
     // const penWidth = document.getElementById('pen-tip').value
 
 
-    canvas.height = window.innerHeight;//400; //this is 800px
+    canvas.height = window.innerHeight;//400; // 400 = 800px
     canvas.width = window.innerWidth;//400;
 
     let drawing = false;
@@ -30,6 +30,8 @@ window.addEventListener('load', () => {
         context.lineTo(e.offsetX, e.offsetY); //X 11, Y 12 
         // console.log(e.clientX, e.clientY);
         // context.lineTo(e.clientX, e.clientY); //X 830, Y 90
+        // console.log(e.pageX, e.pageY);
+        // context.lineTo(e.pageX/2, e.pageY/2); // X 496, Y 91
 
         context.stroke();        
     }

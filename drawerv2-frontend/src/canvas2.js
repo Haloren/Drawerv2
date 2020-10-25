@@ -5,8 +5,8 @@ window.addEventListener('load', () => {
     // const penColor = document.getElementById('color').value
     // const penWidth = document.getElementById('pen-tip').value
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = 400; //400 = 800px
+    canvas.height = 400;
     
     context.fillRect(100, 100, 100, 100);
     
@@ -20,3 +20,5 @@ window.addEventListener('load', () => {
     })
 
 })
+
+// Web Sockets for a shared Canvas - https://www.youtube.com/watch?v=bjULmG8fqc8
