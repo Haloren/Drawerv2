@@ -2,9 +2,8 @@
 YouTube Video Demo: https://youtu.be/XPEXFG_qAw8
 
 Exploration goals for this project:
-- Build a Rails API
-- Build a Single Page Application (SPA) that uses the data from the rails API
-- Build a SPA with Javascript  
+- Build a Rails API for the backend
+- Use Javascript for my frontend  
 - Work with grids and columns in CSS
 
 # RULES

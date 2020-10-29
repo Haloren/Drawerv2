@@ -32,6 +32,10 @@ window.addEventListener('load', () => {
         // context.lineTo(e.clientX, e.clientY); //X 830, Y 90
         // console.log(e.pageX, e.pageY);
         // context.lineTo(e.pageX/2, e.pageY/2); // X 496, Y 91
+        //Figure out x and y by mouse position maybe?
+            //xAxis = (window.innerWidth / 2 - e.pageX);
+            //yAxis = (window.innerHeight / 2 - epageY);
+            //https://stackoverflow.com/questions/30082590/mouse-cursor-doesnt-match-with-canvas  
 
         context.stroke();        
     }
