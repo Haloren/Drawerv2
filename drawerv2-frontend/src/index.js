@@ -55,7 +55,7 @@ const createPlayer = (e) => {
         body: JSON.stringify({name: e.target.name.value})
     }
     fetch(PLAYERS_URL, configObj)
-    .then(resp = resp.json())
+    .then(resp => resp.json())
     .then(json =>
           json.message ? alert(json.message) : renderPlayer(json)
     )

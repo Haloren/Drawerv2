@@ -23,9 +23,12 @@ class PlayersController < ApplicationController
 
     def destroy
         player = Player.all.find_by(id: params[:id])
-        player.destroy
-        render json: {message: "Mess with the best, die like the rest"}
-        render json: player
+        if player
+            player.destroy
+            render json: {message: "Mess with the best, die like the rest"}
+        else
+            render json: {message: "Delete Failed"}
+        end
     end
 
     private
