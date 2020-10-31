@@ -59,6 +59,7 @@ const createPlayer = (e) => {
     .then(json =>
           json.message ? alert(json.message) : renderPlayer(json)
     )
+    e.path[0].reset() //clear form input
 }
 
 const deletePlayer = (e) => {
@@ -115,10 +116,11 @@ const addWord = (e) => {
         body: JSON.stringify({content: e.target.name.value})
     }
     fetch(CARDS_URL, configObj)
-    .then(resp = resp.json())
+    .then(resp => resp.json())
     .then(json =>
         json.message ? alert(json.message) : renderCards(json)    
     )
+    e.path[0].reset()
 }
 
 //GET NEW WORDS (re-run loadCards)

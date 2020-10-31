@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
         context.lineCap = "round";
         
         // console.log(e)
-        console.log(e.offsetX, e.offsetY);
+        // console.log(e.offsetX, e.offsetY);
         context.lineTo(e.offsetX, e.offsetY); //X 11, Y 12 
         // console.log(e.clientX, e.clientY);
         // context.lineTo(e.clientX, e.clientY); //X 830, Y 90
