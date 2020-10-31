@@ -99,29 +99,29 @@ let renderCards = (cardList) => {
     div.innerHTML = cardList[Math.floor(Math.random() * cardList.length)].content 
     div2.innerHTML = cardList[Math.floor(Math.random() * cardList.length)].content
 
-    document.getElementById("new-word").addEventListener('submit', addWord)
+    // document.getElementById("new-word").addEventListener('submit', addWord)
     
     cardsContainer.appendChild(div)
     cardsContainer.appendChild(div2)
 }
 
-const addWord = (e) => {
-    e.preventDefault()
-    const configObj = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept':'application/json'
-        },
-        body: JSON.stringify({content: e.target.name.value})
-    }
-    fetch(CARDS_URL, configObj)
-    .then(resp => resp.json())
-    .then(json =>
-        json.message ? alert(json.message) : renderCards(json)    
-    )
-    e.path[0].reset()
-}
+// const addWord = (e) => {
+//     e.preventDefault()
+//     const configObj = {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//             'Accept':'application/json'
+//         },
+//         body: JSON.stringify({content: e.target.name.value})
+//     }
+//     fetch(CARDS_URL, configObj)
+//     .then(resp => resp.json())
+//     .then(json =>
+//         json.message ? alert(json.message) : renderCards(json)    
+//     )
+//     e.path[0].reset()
+// }
 
 //GET NEW WORDS (re-run loadCards)
 const newWords = document.getElementById("new-words")

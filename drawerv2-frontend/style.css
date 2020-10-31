@@ -215,6 +215,9 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 /* GET NEW WORDS */
+.btn-container {
+    text-align: center;
+}
 .new-words {
     width: 75%;
     font-size: 1.5rem;

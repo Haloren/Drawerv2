@@ -19,11 +19,13 @@
             <button id="toggle">Start</button>
             <button id="reset">Reset</button>
         </div>
-
-        <form id="new-player">
-            <input type="text" name="name" class="new-player" placeholder="Player Name">
-            <input type="submit" id="add-player" class="add-player" value="Add Player">
-        </form>
+        
+        <div class="btn-container">
+            <form id="new-player">
+                <input type="text" name="name" class="new-player" placeholder="Player Name">
+                <input type="submit" id="add-player" class="add-player" value="Add Player">
+            </form>
+        </div>
 
         <div id="scoreboard" class="scoreboard">
             <h1> Scoreboard </h1>
@@ -35,12 +37,13 @@
             <div id="cards-grid" class="cards-grid"></div>
         </div>
 
-        <button id="new-words" class="new-words"> Get New Words </button>
-
-        <form id="new-word" class="new-word">
+        <div class="btn-container">
+            <button id="new-words" class="new-words"> Get New Words </button>
+        </div>
+        <!-- <form id="new-word" class="new-word">
             <input type="text" name="name" class="new-word" placeholder="Add Word">
             <input type="submit" id="add-word" class="add-word" value="Add Word">
-        </form>
+        </form> -->
     </main>
 
     <div class="canvas">
