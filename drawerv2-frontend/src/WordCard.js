@@ -24,8 +24,6 @@ class WordCard {
         cardsContainer.appendChild(div)
         // cardsContainer.appendChild(div2)
     }
-    
-
 
     static getAllWords(){
         api.getAllWords().then(words => words.forEach(word => new WordCard(word)))

@@ -1,5 +1,7 @@
 const api = new ApiService("http://localhost:3000")
 
+//ADD PLAYER
+const playerForm = document.getElementById("new-player")
 //FETCH PLAYERS
 const scoreboard = document.getElementById("scoreboard")
 //FETCH GAME CARDS (cards-container)
@@ -11,9 +13,10 @@ const time = document.getElementById('time');
 const toggle = document.getElementById('toggle');
 const reset = document.getElementById('reset');
 
+const playerFormInstance = new PlayerForm
+
 Player.getAllPlayers()
 WordCard.getAllWords()
-
 
 
 // TOGGLE GAME CARDS (HIDE AND SHOW)
