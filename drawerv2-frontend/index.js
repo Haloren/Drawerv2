@@ -14,3 +14,16 @@ const time = document.getElementById('time');
 const toggle = document.getElementById('toggle');
 const reset = document.getElementById('reset');
 
+
+
+
+// TOGGLE SHOW AND HIDE RULES
+showRules = () => {
+    // console.log("Show Rules")
+    let hide = document.getElementById("showRules");
+    if (hide.style.display === "none") {
+        hide.style.display = "";
+    } else {
+        hide.style.display = "none"
+    }
+}
