@@ -1,6 +1,17 @@
-console.log("Player")
+// console.log("Player")
 class Player {
+
+    constructor(player) {
+        this.player = player
+        console.log(this)
+    }
     
+
+
+
+    static getAllPlayers(){
+        api.getAllPlayers().then(players => players.forEach(player => new Player(player)))
+    }
 }
 
 

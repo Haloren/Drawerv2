@@ -1,4 +1,4 @@
-console.log("Timer")
+// console.log("Timer")
 class Timer {
     
 }

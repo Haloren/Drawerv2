@@ -1,4 +1,4 @@
-console.log("Canvas")
+// console.log("Canvas")
 class Canvas {
     
 }

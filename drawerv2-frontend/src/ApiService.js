@@ -8,4 +8,11 @@ class ApiService {
     getAllPlayers = () => fetch(`${this.root}/players`).then(resp => resp.json())
 
     getAllWords = () => fetch(`${this.root}/cards`).then(resp => resp.json())
+
+
+
+
+
+
+
 }

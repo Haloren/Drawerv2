@@ -11,8 +11,8 @@ const time = document.getElementById('time');
 const toggle = document.getElementById('toggle');
 const reset = document.getElementById('reset');
 
-
-
+Player.getAllPlayers()
+WordCard.getAllWords()
 
 // TOGGLE SHOW AND HIDE RULES
 showRules = () => {

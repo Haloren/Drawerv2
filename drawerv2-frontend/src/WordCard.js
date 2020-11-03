@@ -1,6 +1,17 @@
-console.log("Words")
-class Words {
+// console.log("WordCard")
+class WordCard {
     
+    constructor(word) {
+        this.word = word
+        // console.log(this)
+    }
+
+
+
+
+    static getAllWords(){
+        api.getAllWords().then(words => words.forEach(word => new WordCard(word)))
+    }
 }
 
 
