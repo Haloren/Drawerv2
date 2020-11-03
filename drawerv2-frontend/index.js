@@ -14,6 +14,16 @@ const reset = document.getElementById('reset');
 Player.getAllPlayers()
 WordCard.getAllWords()
 
+// TOGGLE GAME CARDS (HIDE AND SHOW)
+const showWords  = () => {
+    let hide = document.getElementById("cards-grid");
+    if(hide.style.display === "none") {
+        hide.style.display = "";
+    } else {
+        hide.style.display = "none"
+    }
+}
+
 // TOGGLE SHOW AND HIDE RULES
 showRules = () => {
     // console.log("Show Rules")

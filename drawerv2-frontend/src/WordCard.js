@@ -9,20 +9,20 @@ class WordCard {
 
     renderCards(){
         const div = document.createElement("div")
-        const div2 = document.createElement("div")
+        // const div2 = document.createElement("div")
     
         div.setAttribute("class", "game-card")
         div.setAttribute("id", "game-card1")
-        div2.setAttribute("class", "game-card")
-        div2.setAttribute("id", "game-card2")
+        // div2.setAttribute("class", "game-card")
+        // div2.setAttribute("id", "game-card2")
     
-        div.innerHTML = cardList[Math.floor(Math.random() * cardList.length)].content 
-        div2.innerHTML = cardList[Math.floor(Math.random() * cardList.length)].content
+        div.innerHTML = this.word.content // all[Math.floor(Math.random() * all.length)].content 
+        // div2.innerHTML = this.word.content // all[Math.floor(Math.random() * all.length)].content
     
         // document.getElementById("new-word").addEventListener('submit', addWord)
         
         cardsContainer.appendChild(div)
-        cardsContainer.appendChild(div2)
+        // cardsContainer.appendChild(div2)
     }
     
 
