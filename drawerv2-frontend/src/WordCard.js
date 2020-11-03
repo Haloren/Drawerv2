@@ -4,9 +4,27 @@ class WordCard {
     constructor(word) {
         this.word = word
         // console.log(this)
+        this.renderCards()
     }
 
-
+    renderCards(){
+        const div = document.createElement("div")
+        const div2 = document.createElement("div")
+    
+        div.setAttribute("class", "game-card")
+        div.setAttribute("id", "game-card1")
+        div2.setAttribute("class", "game-card")
+        div2.setAttribute("id", "game-card2")
+    
+        div.innerHTML = cardList[Math.floor(Math.random() * cardList.length)].content 
+        div2.innerHTML = cardList[Math.floor(Math.random() * cardList.length)].content
+    
+        // document.getElementById("new-word").addEventListener('submit', addWord)
+        
+        cardsContainer.appendChild(div)
+        cardsContainer.appendChild(div2)
+    }
+    
 
 
     static getAllWords(){
@@ -17,19 +35,6 @@ class WordCard {
 
 
 
-
-// //FETCH GAME CARDS (cards-container)
-// const cardsContainer = document.getElementById("cards-grid")
-
-// document.addEventListener("DOMContentLoaded", () => loadCards())
-
-// const loadCards = () => {
-//     fetch(CARDS_URL)
-//     .then(resp => resp.json())
-//     .then(json => {
-//         renderCards(json)
-//     })
-// }
 // let renderCards = (cardList) => {
 //     const div = document.createElement("div")
 //     const div2 = document.createElement("div")

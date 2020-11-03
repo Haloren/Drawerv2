@@ -9,12 +9,12 @@ class Player {
     }
     
     renderPlayer(){
-        const p = document.createElement("p")
+        const playerCard = document.createElement("p")
         const input = document.createElement("input")
         const button = document.createElement("button")
     
-        p.setAttribute("class", "player")
-        p.innerHTML = this.player.name
+        playerCard.setAttribute("class", "player")
+        playerCard.innerHTML = this.player.name
         input.innerHTML = "0"
     
         button.setAttribute("class", "delete-player")
@@ -28,9 +28,11 @@ class Player {
         // document.getElementById("new-player").addEventListener('submit', createPlayer)
         // button.addEventListener('click', deletePlayer)
     
-        scoreboard.appendChild(p)
-        p.appendChild(button)
-        p.appendChild(input)
+        scoreboard.appendChild(playerCard)
+        playerCard.appendChild(button)
+        playerCard.appendChild(input)
+
+        this.playerCard = playerCard
     }
 
     renderInnerHTML(){
