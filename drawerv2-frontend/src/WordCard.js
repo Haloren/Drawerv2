@@ -32,27 +32,6 @@ class WordCard {
     }
 }
 
-
-
-
-// let renderCards = (cardList) => {
-//     const div = document.createElement("div")
-//     const div2 = document.createElement("div")
-
-//     div.setAttribute("class", "game-card")
-//     div.setAttribute("id", "game-card1")
-//     div2.setAttribute("class", "game-card")
-//     div2.setAttribute("id", "game-card2")
-
-//     div.innerHTML = cardList[Math.floor(Math.random() * cardList.length)].content 
-//     div2.innerHTML = cardList[Math.floor(Math.random() * cardList.length)].content
-
-//     // document.getElementById("new-word").addEventListener('submit', addWord)
-    
-//     cardsContainer.appendChild(div)
-//     cardsContainer.appendChild(div2)
-// }
-
 // //GET NEW WORDS (re-run loadCards)
 // const newWords = document.getElementById("new-words")
 
@@ -62,13 +41,3 @@ class WordCard {
 //     document.getElementById("game-card2").replaceWith()
 //     loadCards()
 // })
-
-// //HIDE AND SHOW GAME CARDS
-// const showWords  = () => {
-//     let hide = document.getElementById("cards-grid");
-//     if(hide.style.display === "none") {
-//         hide.style.display = "";
-//     } else {
-//         hide.style.display = "none"
-//     }
-// }

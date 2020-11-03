@@ -14,6 +14,8 @@ const reset = document.getElementById('reset');
 Player.getAllPlayers()
 WordCard.getAllWords()
 
+
+
 // TOGGLE GAME CARDS (HIDE AND SHOW)
 const showWords  = () => {
     let hide = document.getElementById("cards-grid");

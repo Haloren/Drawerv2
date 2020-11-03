@@ -9,10 +9,7 @@ class ApiService {
 
     getAllWords = () => fetch(`${this.root}/cards`).then(resp => resp.json())
 
-
-
-
-
+    
 
 
 }
