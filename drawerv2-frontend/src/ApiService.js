@@ -21,5 +21,10 @@ class ApiService {
         .then(resp => resp.json())
     } 
 
+    destroyPlayer = (id) => {
+        return fetch(`${this.root}/players/${id}`, {
+            method: 'DELETE',
+        })
+    }
 
 }

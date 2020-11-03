@@ -37,22 +37,13 @@ class Player {
     }
 
     handleClick = (e) => {
-        console.log(this)
+        // console.log(this)
         const playerId = this.player.id 
 
-    // const deletePlayer = (e) => {
-    //     e.preventDefault()
-    //     const configObj = {
-    //         method: 'DELETE',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'Accept':'application/json'
-    //         }
-    //     }
-    //     fetch(`${PLAYERS_URL}/${e.target.dataset.playerId}`, configObj)
-    //         e.target.parentElement.remove()
-    // }
-        
+        if (e.target.classList.contains("delete-player")){
+            api.destroyPlayer(playerId).then(resp => resp.ok)
+            this.playerCard.remove()
+        }        
     }
 
     static getAllPlayers(){
