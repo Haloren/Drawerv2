@@ -4,7 +4,7 @@ const CARDS_URL = `${BASE_URL}/cards`
 const GAMES_URL = `${BASE_URL}/games`
 
 //FETCH PLAYERS
-const player = document.getElementById("scoreboard")
+const player = document.getElementById("scoreboard") // const scoreboard
 
 document.addEventListener("DOMContentLoaded", () => loadPlayers())
 
@@ -39,7 +39,7 @@ const renderPlayer = (playerList) => {
     document.getElementById("new-player").addEventListener('submit', createPlayer)
     button.addEventListener('click', deletePlayer)
 
-    player.appendChild(p)
+    player.appendChild(p) //scoreboard.appendChild(p)
     p.appendChild(button)
     p.appendChild(input)
 }
