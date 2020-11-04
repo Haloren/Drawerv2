@@ -1,34 +1,36 @@
 // console.log("WordCard")
 class WordCard {
     
+    static all = []
+
     constructor(word) {
         this.word = word
         // console.log(this)
-        this.renderCards()
+        // this.renderCards()
+        this.constructor.all.push(this)
     }
 
     renderCards(){
         const wordCard = document.createElement("div")
-        // const div2 = document.createElement("div")
-    
         wordCard.setAttribute("class", "game-card")
-        wordCard.setAttribute("id", "game-card1")
-        // div2.setAttribute("class", "game-card")
-        // div2.setAttribute("id", "game-card2")
-    
-        wordCard.innerHTML = this.word.content // all[Math.floor(Math.random() * all.length)].content 
-        // div2.innerHTML = this.word.content // all[Math.floor(Math.random() * all.length)].content
-    
-        // document.getElementById("new-word").addEventListener('submit', addWord)
+        wordCard.setAttribute("id", "game-card1")    
+        wordCard.innerHTML = this.word.content 
         
         cardsContainer.appendChild(wordCard)
-        // cardsContainer.appendChild(div2)
-
+    
         this.wordCard = wordCard
     }
 
+    static getRandomCard(){
+        this.all[Math.floor(Math.random() * this.all.length)].word.content
+    }
+
     static getAllWords(){
-        api.getAllWords().then(words => words.forEach(word => new WordCard(word)))
+        api.getAllWords().then(words => {
+            words.forEach(word => new WordCard(word));
+            // this.getrandomCard()
+            words[Math.floor(Math.random() * words.length)].content;
+        })    
     }
 }
 

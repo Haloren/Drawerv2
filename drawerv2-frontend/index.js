@@ -12,6 +12,8 @@ const wordFormInstance = new WordsForm
 Player.getAllPlayers()
 WordCard.getAllWords()
 
+//allWordLength = WordCard.all.length
+//WordCard.all[index]
 
 // TOGGLE GAME CARDS (HIDE AND SHOW)
 const showWords  = () => {
