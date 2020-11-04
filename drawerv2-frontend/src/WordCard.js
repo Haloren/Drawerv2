@@ -8,21 +8,23 @@ class WordCard {
     }
 
     renderCards(){
-        const div = document.createElement("div")
+        const wordCard = document.createElement("div")
         // const div2 = document.createElement("div")
     
-        div.setAttribute("class", "game-card")
-        div.setAttribute("id", "game-card1")
+        wordCard.setAttribute("class", "game-card")
+        wordCard.setAttribute("id", "game-card1")
         // div2.setAttribute("class", "game-card")
         // div2.setAttribute("id", "game-card2")
     
-        div.innerHTML = this.word.content // all[Math.floor(Math.random() * all.length)].content 
+        wordCard.innerHTML = this.word.content // all[Math.floor(Math.random() * all.length)].content 
         // div2.innerHTML = this.word.content // all[Math.floor(Math.random() * all.length)].content
     
         // document.getElementById("new-word").addEventListener('submit', addWord)
         
-        cardsContainer.appendChild(div)
+        cardsContainer.appendChild(wordCard)
         // cardsContainer.appendChild(div2)
+
+        this.wordCard = wordCard
     }
 
     static getAllWords(){

@@ -20,11 +20,21 @@ class ApiService {
         })
         .then(resp => resp.json())
     } 
-
     destroyPlayer = (id) => {
         return fetch(`${this.root}/players/${id}`, {
             method: 'DELETE',
         })
     }
 
+    postWordCard = (word) => {
+        return fetch(`${this.root}/cards`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept':'application/json',
+            },
+            body: JSON.stringify(word),
+        })
+        .then(resp => resp.json())
+    }
 }
