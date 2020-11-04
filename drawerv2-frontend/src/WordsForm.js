@@ -15,14 +15,13 @@ class WordsForm {
         // console.log(e.target, this)
         // console.log(this.getFormData(e.target))
         const data = this.getFormData(e.target)
-        api.postPlayer(data).then(console.log)
-        // api.postWordCard(data).then(word => new WordCars(word))
+        // api.postPlayer(data).then(console.log)
+        api.postWordCard(data).then(word => new WordCard(word))
 
-        // playerForm.reset()
+        wordForm.reset()
     }
 
     getFormData = (form) => {
-        return {content: form.name.value}
-        // need to add game id
+        return {content: form.name.value, game_id: 1}
     }
 }
