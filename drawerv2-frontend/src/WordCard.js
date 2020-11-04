@@ -6,30 +6,34 @@ class WordCard {
     constructor(word) {
         this.word = word
         // console.log(this)
-        // this.renderCards()
         this.constructor.all.push(this)
     }
 
-    renderCards(){
-        const wordCard = document.createElement("div")
-        wordCard.setAttribute("class", "game-card")
-        wordCard.setAttribute("id", "game-card1")    
-        wordCard.innerHTML = this.word.content 
-        
-        cardsContainer.appendChild(wordCard)
-    
-        this.wordCard = wordCard
-    }
-
-    static getRandomCard(){
-        this.all[Math.floor(Math.random() * this.all.length)].word.content
-    }
+    // static getRandomCard(){
+    //     let wordCard1 = this.all[Math.floor(Math.random() * this.all.length)].word.content
+    //     let wordCard2 = this.all[Math.floor(Math.random() * this.all.length)].word.content
+    // }
 
     static getAllWords(){
         api.getAllWords().then(words => {
             words.forEach(word => new WordCard(word));
-            // this.getrandomCard()
-            words[Math.floor(Math.random() * words.length)].content;
+            
+            // getrandomCard()
+            const wordCardContent1 = words[Math.floor(Math.random() * words.length)].content;
+            const wordCardContent2 = words[Math.floor(Math.random() * words.length)].content;
+            const wordCard1 = document.createElement("div")
+            const wordCard2 = document.createElement("div")
+    
+            wordCard1.setAttribute("class", "game-card")
+            wordCard1.setAttribute("id", "game-card1")    
+            wordCard2.setAttribute("class", "game-card")
+            wordCard2.setAttribute("id", "game-card2")            
+            
+            wordCard1.innerHTML = wordCardContent1
+            wordCard2.innerHTML = wordCardContent2
+    
+            cardsContainer.appendChild(wordCard1)
+            cardsContainer.appendChild(wordCard2)
         })    
     }
 }

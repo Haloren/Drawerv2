@@ -2,8 +2,10 @@ const api = new ApiService("http://localhost:3000")
 
 const playerForm = document.getElementById("new-player") //ADD PLAYER
 const scoreboard = document.getElementById("scoreboard") //FETCH PLAYERS
+
 const cardsContainer = document.getElementById("cards-grid") //FETCH GAME CARDS (cards-container)
-const newWords = document.getElementById("new-words") //GET NEW WORDS (re-run loadCards)
+const newWords = document.getElementById("new-words") //GET NEW WORDS BUTTON
+
 const wordForm = document.getElementById("new-word") // ADD WORD
 
 const playerFormInstance = new PlayerForm
@@ -11,9 +13,6 @@ const wordFormInstance = new WordsForm
 
 Player.getAllPlayers()
 WordCard.getAllWords()
-
-//allWordLength = WordCard.all.length
-//WordCard.all[index]
 
 // TOGGLE GAME CARDS (HIDE AND SHOW)
 const showWords  = () => {
