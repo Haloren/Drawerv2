@@ -1,17 +1,9 @@
 const api = new ApiService("http://localhost:3000")
 
-//ADD PLAYER
-const playerForm = document.getElementById("new-player")
-//FETCH PLAYERS
-const scoreboard = document.getElementById("scoreboard")
-//FETCH GAME CARDS (cards-container)
-const cardsContainer = document.getElementById("cards-grid")
-//GET NEW WORDS (re-run loadCards)
-const newWords = document.getElementById("new-words")
-//TIMER
-const time = document.getElementById('time');
-const toggle = document.getElementById('toggle');
-const reset = document.getElementById('reset');
+const playerForm = document.getElementById("new-player") //ADD PLAYER
+const scoreboard = document.getElementById("scoreboard") //FETCH PLAYERS
+const cardsContainer = document.getElementById("cards-grid") //FETCH GAME CARDS (cards-container)
+const newWords = document.getElementById("new-words") //GET NEW WORDS (re-run loadCards)
 
 const playerFormInstance = new PlayerForm
 
@@ -39,3 +31,29 @@ showRules = () => {
         hide.style.display = "none"
     }
 }
+
+//TIMER
+const time = document.getElementById('time');
+const toggle = document.getElementById('toggle');
+const reset = document.getElementById('reset');
+
+const timer = new Countdown(time);
+
+toggle.addEventListener('click', function() {
+    if (timer.timeRunning) {
+        timer.stop();
+        
+        toggle.textContent = 'Start'
+        console.log('stop')
+    } else {
+        timer.start();
+
+        toggle.textContent = 'Stop'
+        console.log('start')
+    }
+});
+
+reset.addEventListener('click', function() {
+    timer.reset();
+    console.log('reset')
+})
