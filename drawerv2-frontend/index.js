@@ -14,6 +14,7 @@ const wordFormInstance = new WordsForm
 Player.getAllPlayers()
 WordCard.getAllWords()
 
+
 // TOGGLE GAME CARDS (HIDE AND SHOW)
 const showWords  = () => {
     let hide = document.getElementById("cards-grid");
@@ -34,6 +35,13 @@ const showRules = () => {
         hide.style.display = "none"
     }
 }
+
+//GET NEW WORDS BUTTON & RERUN getAllWords()
+newWords.addEventListener('click', function() {
+    document.getElementById("game-card1").replaceWith()
+    document.getElementById("game-card2").replaceWith()
+    WordCard.getAllWords()
+})
 
 //TIMER
 const time = document.getElementById('time');

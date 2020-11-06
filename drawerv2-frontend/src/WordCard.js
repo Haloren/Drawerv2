@@ -7,7 +7,6 @@ class WordCard {
         this.word = word
         // console.log(this)
         this.constructor.all.push(this)
-        this.setEventListeners()
     }
 
     static getAllWords(){
@@ -30,20 +29,8 @@ class WordCard {
     
             cardsContainer.appendChild(wordCard1)
             cardsContainer.appendChild(wordCard2)
-        })    
-    }
-    
-    setEventListeners = () => {
-        newWords.addEventListener('click', this.handleClick)
-    } 
 
-    handleClick = (e) => {
-        // console.log(cardsContainer)
-        console.log(this.constructor.all[Math.floor(Math.random() * this.constructor.all.length)].word.content)
-        // const gameCard1 = this.constructor.all[Math.floor(Math.random() * this.constructor.all.length)].word.content
-        // const gameCard2 = this.constructor.all[Math.floor(Math.random() * this.constructor.all.length)].word.content
-        // document.getElementById("game-card1").replaceWith()
-        // document.getElementById("game-card2").replaceWith()
-        // getAllWords()
+            this.wordCardContent1 = wordCardContent1
+        })    
     }
 }

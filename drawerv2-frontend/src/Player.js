@@ -8,7 +8,7 @@ class Player {
         this.setEventListeners()
     }
     
-    renderPlayer(){
+    renderPlayer = () => {
         const playerCard = document.createElement("p")
         const input = document.createElement("input")
         const button = document.createElement("button")
