@@ -1,12 +1,12 @@
 const api = new ApiService("http://localhost:3000")
 
-const playerForm = document.getElementById("new-player") //ADD PLAYER
+const playerForm = document.getElementById("new-player") //ADD PLAYER FORM
 const scoreboard = document.getElementById("scoreboard") //FETCH PLAYERS
 
 const cardsContainer = document.getElementById("cards-grid") //FETCH GAME CARDS (cards-container)
 const newWords = document.getElementById("new-words") //GET NEW WORDS BUTTON
 
-const wordForm = document.getElementById("new-word") // ADD WORD
+const wordForm = document.getElementById("new-word") // ADD WORD FORM
 
 const playerFormInstance = new PlayerForm
 const wordFormInstance = new WordsForm
