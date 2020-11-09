@@ -3,6 +3,8 @@ const api = new ApiService("http://localhost:3000")
 const playerForm = document.getElementById("new-player") //ADD PLAYER FORM
 const scoreboard = document.getElementById("scoreboard") //FETCH PLAYERS
 
+const randomPlayer = document.getElementById("random-player")
+
 const cardsContainer = document.getElementById("cards-grid") //FETCH GAME CARDS (cards-container)
 const newWords = document.getElementById("new-words") //GET NEW WORDS BUTTON
 
@@ -13,7 +15,6 @@ const wordFormInstance = new WordsForm
 
 Player.getAllPlayers()
 WordCard.getAllWords()
-
 
 // TOGGLE GAME CARDS (HIDE AND SHOW)
 const showWords  = () => {
@@ -67,4 +68,13 @@ toggle.addEventListener('click', function() {
 reset.addEventListener('click', function() {
     timer.reset();
     console.log('reset')
+})
+
+// PICK RANDOM PLAYER
+randomPlayer.addEventListener('click', function(){
+    // console.log("Next Drawer")
+    const red = "rgb(160, 16, 49)"
+    const allPlayers = document.getElementsByClassName("player")
+    const randomPlayer = allPlayers[Math.floor(Math.random() * allPlayers.length)]//.innerText
+    randomPlayer.style.color = red
 })

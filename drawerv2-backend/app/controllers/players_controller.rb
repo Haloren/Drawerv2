@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
     def index
-        players = Player.all
+        players = Player.all #players = Player.order(:name)
         render json: players
     end
 
